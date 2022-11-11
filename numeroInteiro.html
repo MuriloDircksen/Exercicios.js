@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>Entre com um número inteiro:</p>
+    <div class="numeor"> <label>Numero Inteiro</label>
+    </div>
+    <input type="number" name="inteiro" text="inteiro" placeholder="Ex: 2"  id="inteiro"  >
+    <div>
+    <div>
+    
+        <input type="button" id="submit" name="calculate" value="Calcular">
+    </div>
+    <script>
+               const calculate = document.getElementById('submit')
+   
+   calculate.addEventListener('click', () => {
+
+      let mensagem
+      let resto = document.getElementById('inteiro').value % 2
+      if(resto ==0){mensagem = 'par'}
+      else{mensagem='impar'}
+    
+      alert('Número é ' + mensagem)
+    
+    
+    
+  })
+        </script>
+</body>
+</html>

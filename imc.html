@@ -20,10 +20,21 @@
     // Crie a lógica a partir deste ponto
    calculate.addEventListener('click', () => {
 
-      
+      let mensagem;
       let imc = document.getElementById('weight').value / (((document.getElementById('height').value/100) * (document.getElementById('height').value/100)))
-    alert('Resultado IMC: ' + imc.toFixed(2))
+      if(imc<16){ mensagem="magreza grave"}
+    else if(imc>=16 && imc<17){mensagem="magreza moderada"}
+    else if(imc>=17 && imc<18.5){mensagem="magreza leve"}
+    else if(imc>=18.5 && imc<25){mensagem="saudável"}
+    else if(imc>=25 && imc<30){mensagem="sobrepeso"}
+    else if(imc>=30 && imc<35){mensagem="obesidade grau I"}
+    else if(imc>=35 && imc<40){mensagem="obesidade grau II (considerada severa)"}
+    else {mensagem="sbesidade grau III (considerada morbida)"}
+    
+      alert('Resultado IMC: ' + imc.toFixed(2)+", que é categorizado como "+mensagem)
     console.table(['Idade: '+document.getElementById('age').value, 'Peso: '+document.getElementById('height').value, 'Altura: '+document.getElementById('weight').value, 'IMC: '+imc.toFixed(2)])
+    
+    
   })
 </script>
 </html>

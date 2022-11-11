@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>Entre com o número de lados do poligono e seu tamanho:</p>
+    <div class="lado"> <label>Lados</label>
+    </div>
+    <input type="number" name="numeroLado" text="Numero lados" placeholder="Ex: 2" maxlength="5" id="lado"  min="0" max="5"> <span class="caption">lados</span>
+ 
+  <div>
+    <div class="comprimento"> <label>Comprimento lado</label>
+    </div>
+    <input type="number" name="comprimento" text="Comprimento" placeholder="Ex: 15" maxlength="200" id="comprimento"  min="0" > <span class="caption">cm</span>
+ 
+  <div>
+    
+    <input type="button" id="submit" name="calculate" value="Calcular">
+  </div>
+  <script>
+   const calcular = document.getElementById('submit')
+    
+   calcular.addEventListener('click', () => {
+
+      
+      
+      
+    let area=document.getElementById('comprimento').value*document.getElementById('comprimento').value
+           
+    
+    if(document.getElementById('lado').value==3){
+        alert('triângulo de '+area+' centimetros quadrados')
+    }else if(document.getElementById('lado').value==4){alert('quadrado de '+area+' centimetros quadrados')}
+    else if(document.getElementById('lado').value==5) {alert('pentagono de '+area+' centimetros quadrados')}
+    else if(document.getElementById('lado').value<=2){alert('Não é polígono')}
+    
+    
+     
+    
+    
+          
+  })
+
+  </script>
+</body>
+</html>
