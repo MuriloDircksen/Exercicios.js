@@ -48,12 +48,13 @@ function maiorPrimo(inicio, fim){
     let maiorPrimo
     for(count=inicio ; count<=fim ; count++){
         divisores=0;
-        for(aux=1 ; aux<=count ; aux++)
+        for(aux=1 ; aux<=count ; aux++){
             if(count % aux == 0)
                 divisores++;
-
-        if(divisores==2)
+        }
+        if(divisores==2){
            maiorPrimo = count ;
+        }
     }
     return console.log(maiorPrimo)
 }
